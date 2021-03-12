@@ -1,3 +1,11 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+reviews_list:
+  path: /api/v1/hotels
+  controller: App\Controller\ReviewController:indexAction
+  methods: [GET]
+overtime_reviews_scores_list:
+  path: /api/v1/overtime-reviews-scores/{hotelId}
+  controller: App\Controller\ReviewController:getOvertimeReviewsScores
+  methods: [GET]
